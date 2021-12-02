@@ -3,7 +3,7 @@ Projeto feito com o backend com java spring e enviado para o front-end, feito em
 
 
 # Para iniciar o Back-end
-mvn spring:boot run
+mvn org.springframework.boot:spring-boot-maven-plugin:run
 
 # Para iniciar o Front-end
 ng serve -o
