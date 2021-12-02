@@ -1,5 +1,5 @@
 import { CargoService } from './../services/cargo.service';
-import { ICargo } from '../model/cargo';
+import { Cargo } from '../model/cargo';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { ActivatedRoute } from '@angular/router';
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './mostrar-cargo-por-id.component.html',
 })
 export class MostrarCargoPorIdComponent implements OnInit {
-  cargo = {} as ICargo;
+  cargo = {} as Cargo;
 
   constructor(
     private cargoService: CargoService,

@@ -1,8 +1,8 @@
-import { ILink } from "./link";
+import { Link } from "./link";
 
 
-export interface ICargo {
+export interface Cargo {
   id: number;
   nome: string;
-  _links: Array<ILink>[];
+  _links: Array<Link>[];
 }

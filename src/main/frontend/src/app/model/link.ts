@@ -1,6 +1,6 @@
-import { ISelf } from "./self";
+import { Self } from "./self";
 
 
-export interface ILink {
-    self : Array<ISelf>
+export interface Link {
+    self : Array<Self>
 }

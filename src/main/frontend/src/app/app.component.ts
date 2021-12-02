@@ -1,7 +1,7 @@
 import { CargoService } from './services/cargo.service';
 import { Component } from '@angular/core';
 
-import { ICargo } from './model/cargo';
+import { Cargo } from './model/cargo';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { ICargo } from './model/cargo';
 export class AppComponent {
   title = 'angular';
 
-  cargos: ICargo[] | undefined;
+  cargos: Cargo[] | undefined;
 
   constructor(private cargoService: CargoService) {}
 
@@ -19,7 +19,7 @@ export class AppComponent {
   }
 
   getCargos() {
-    this.cargoService.getCargos().subscribe((cargos: ICargo[]) => {
+    this.cargoService.getCargos().subscribe((cargos: Cargo[]) => {
       this.cargos = cargos;
       console.log(this.cargos);
     });
