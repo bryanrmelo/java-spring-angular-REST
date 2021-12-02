@@ -3,9 +3,9 @@ Projeto feito com o backend com java spring e enviado para o front-end, feito em
 
 ## URLs disponíveis na API
 
-<a>http://localhost:8080/api/v1/cargos</a>(GET, POST, PUT, DELETE)<br/>
-<a>http://localhost:8080/api/v1/cargos/</a>(id)<br/>
-<a>http://localhost:8080/api/v1/clientes</a>(GET)<br/>
+<a>http://localhost:8080/api/v1/cargos</a> (GET, POST, PUT, DELETE)<br/>
+<a>http://localhost:8080/api/v1/cargos/(id)</a><br/>
+<a>http://localhost:8080/api/v1/clientes</a> (GET)<br/>
 
 
 ### Para iniciar o Back-end
