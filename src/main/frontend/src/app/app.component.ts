@@ -1,9 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { CargoService } from './services/cargo.service';
 import { Component } from '@angular/core';
 
-import { Cargo } from './model/cargo';
-import { map } from 'rxjs/internal/operators/map';
+import { ICargo } from './model/cargo';
 
 @Component({
   selector: 'app-root',
@@ -12,16 +10,16 @@ import { map } from 'rxjs/internal/operators/map';
 export class AppComponent {
   title = 'angular';
 
-  cargos: Cargo[] | undefined;
+  cargos: ICargo[] | undefined;
 
-  constructor(private cargoService: CargoService, private httpClient: HttpClient) {}
+  constructor(private cargoService: CargoService) {}
 
   ngOnInit(): void {
     this.getCargos();
   }
 
   getCargos() {
-    this.cargoService.getCargos().subscribe((cargos: Cargo[]) => {
+    this.cargoService.getCargos().subscribe((cargos: ICargo[]) => {
       this.cargos = cargos;
       console.log(this.cargos);
     });

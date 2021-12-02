@@ -1,4 +1,4 @@
-export interface Self {
+export interface ISelf {
     href: string
     type: string
 }

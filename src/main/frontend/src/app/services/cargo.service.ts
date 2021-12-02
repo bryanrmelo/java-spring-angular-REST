@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
-import { Cargo } from '../model/cargo';
-import { map, filter, switchMap } from 'rxjs/operators';
+import { ICargo } from '../model/cargo';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -17,11 +17,15 @@ export class CargoService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getCargos(): Observable<Cargo[]> {
+  getCargos(): Observable<ICargo[]> {
     return this.httpClient.get(this.url).pipe(
       map((data: any) => {
-        return data._embedded.cargoList as Cargo[];
+        return data._embedded.cargoList as ICargo[];
       })
     );
+  }
+
+  getCargoPorId(id: number): Observable<ICargo> {
+    return this.httpClient.get<ICargo>(this.url + `/${id}`);
   }
 }
