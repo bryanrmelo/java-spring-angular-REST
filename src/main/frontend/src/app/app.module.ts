@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home';
 import { CargoComponent } from './components/cargo';
 import { ClienteComponent } from './components/cliente';
+import { FuncionarioComponent } from './components/funcionario';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ClienteComponent } from './components/cliente';
     AppComponent,
     HomeComponent,
     CargoComponent,
-    ClienteComponent
+    ClienteComponent,
+    FuncionarioComponent
   ],
   imports: [
     BrowserModule,
