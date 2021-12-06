@@ -6,7 +6,7 @@ import { CargoService } from '../services/cargo.service';
   selector: 'app-root',
   templateUrl: './listaCargos.component.html',
 })
-export class ListaCargos {
+export class CargoComponent {
   cargos: Cargo[] | undefined;
 
   constructor(private cargoService: CargoService) {}

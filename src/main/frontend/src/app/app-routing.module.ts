@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListaCargos } from './cargo/listaCargos.component';
+
+import { ClienteComponent } from './cliente';
+import { CargoComponent } from './cargo';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'listarCargos', component: ListaCargos},
+  { path: 'listarCargos', component: CargoComponent},
+  { path: 'listarClientes', component: ClienteComponent},
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

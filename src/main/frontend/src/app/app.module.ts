@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
-import { ListaCargos } from './cargo/listaCargos.component';
+import { CargoComponent } from './cargo';
+import { ClienteComponent } from './cliente';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ListaCargos } from './cargo/listaCargos.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    ListaCargos
+    CargoComponent,
+    ClienteComponent
   ],
   imports: [
     BrowserModule,
