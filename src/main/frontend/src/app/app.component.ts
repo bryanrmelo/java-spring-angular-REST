@@ -10,18 +10,5 @@ import { Cargo } from './model/cargo';
 export class AppComponent {
   title = 'angular';
 
-  cargos: Cargo[] | undefined;
-
-  constructor(private cargoService: CargoService) {}
-
-  ngOnInit(): void {
-    this.getCargos();
-  }
-
-  getCargos() {
-    this.cargoService.getCargos().subscribe((cargos: Cargo[]) => {
-      this.cargos = cargos;
-      console.log(this.cargos);
-    });
-  }
+  
 }
