@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
-import { LoginComponent } from './login';
 import { CargoComponent } from './cargo';
 import { ClienteComponent } from './cliente';
 
@@ -14,7 +13,6 @@ import { ClienteComponent } from './cliente';
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
     CargoComponent,
     ClienteComponent
   ],
