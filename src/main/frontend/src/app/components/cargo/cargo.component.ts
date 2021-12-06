@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Cargo } from '../model/cargo';
-import { CargoService } from '../services/cargo.service';
+import { Cargo } from '../../model/cargo';
+import { CargoService } from '../../services/cargo.service';
 
 @Component({
   selector: 'app-root',

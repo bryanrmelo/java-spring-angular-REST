@@ -4,9 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home';
-import { CargoComponent } from './cargo';
-import { ClienteComponent } from './cliente';
+import { HomeComponent } from './components/home';
+import { CargoComponent } from './components/cargo';
+import { ClienteComponent } from './components/cliente';
 
 
 @NgModule({
