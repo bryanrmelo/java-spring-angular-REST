@@ -23,11 +23,11 @@
             <td>{{ cargo.nome }}</td>
             <td>
               <div>
-                <a href="{{ cargo._links[0] }}">link </a>
+                <a href="{{ cargo._links.self[0] }}">link </a>
 
-                <a href="{{ cargo._links[1] }}">link </a>
+                <a href="{{ cargo._links }}">link </a>
 
-                <a href="{{ cargo._links[2] }}">link </a>
+                <a href="{{ cargo._links }}">link </a>
               </div>
             </td>
             <!--
