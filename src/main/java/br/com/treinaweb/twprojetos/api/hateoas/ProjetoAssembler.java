@@ -12,13 +12,11 @@ public class ProjetoAssembler implements SimpleRepresentationModelAssembler<Proj
 
     @Override
     public void addLinks(EntityModel<Projeto> resource) {
-        // TODO Auto-generated method stub
         
     }
 
     @Override
     public void addLinks(CollectionModel<EntityModel<Projeto>> resources) {
-        // TODO Auto-generated method stub
         
     }
     
