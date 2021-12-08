@@ -24,14 +24,17 @@ export class CargoComponent {
   }
 
   mostrarCargo(cargo: Cargo) {
-    this.cargoService.getCargoPorId(cargo.id).subscribe((cargo: Cargo) => {
-      this.router.navigate(["/listarCargos", cargo.id])
-    })
+    this.router.navigate(["/listarCargos/detalhes", cargo.id])
+    
   }
 
   editarCargo(cargo: Cargo) {
-    this.router.navigate(["/", "home"])
+    this.router.navigate(["/listarCargos/editar", cargo.id])
   }
 
-  deletarCargo(cargo: Cargo) {}
+  deletarCargo(id: number) {
+    this.cargoService.deleteCargo(id).subscribe(() => {
+      this.getCargos();
+    });
+  }
 }

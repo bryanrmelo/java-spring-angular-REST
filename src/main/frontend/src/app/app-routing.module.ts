@@ -6,11 +6,13 @@ import { CargoComponent } from './components/cargo';
 import { HomeComponent } from './components/home';
 import { FuncionarioComponent } from './components/funcionario';
 import { CargoDetalhesComponent } from './components/cargo/cargo-detalhes/cargo-detalhes.component';
+import { CargoEditarComponent } from './components/cargo/cargo-editar/cargo-editar.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'listarCargos', component: CargoComponent},
-  { path: 'listarCargos/:id', component: CargoDetalhesComponent},
+  { path: 'listarCargos/detalhes/:id', component: CargoDetalhesComponent},
+  { path: 'listarCargos/editar/:id', component: CargoEditarComponent},
   { path: 'listarClientes', component: ClienteComponent},
   { path: 'listarFuncionarios', component: FuncionarioComponent},
   

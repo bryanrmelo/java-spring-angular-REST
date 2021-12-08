@@ -9,6 +9,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class CargoService {
+  
   url = 'http://localhost:8080/api/v1/cargos';
 
   httpOptions = {
@@ -27,5 +28,10 @@ export class CargoService {
 
   getCargoPorId(id: number): Observable<Cargo> {
     return this.httpClient.get<Cargo>(this.url + `/${id}`);
+  }
+
+  deleteCargo(id: number) {
+    //console.log(this.url + '/' + cargo.id)
+    return this.httpClient.delete(this.url + '/' + id)
   }
 }
