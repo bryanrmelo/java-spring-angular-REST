@@ -8,15 +8,19 @@ import { HomeComponent } from './components/home';
 import { CargoComponent } from './components/cargo';
 import { ClienteComponent } from './components/cliente';
 import { FuncionarioComponent } from './components/funcionario';
+import { CargoDetalhesComponent } from './components/cargo/cargo-detalhes/cargo-detalhes.component';
+import { CargoEditarComponent } from './components/cargo/cargo-editar/cargo-editar.component';
 
+
+const ComponentesCargos = [CargoComponent, CargoDetalhesComponent, CargoEditarComponent]
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CargoComponent,
     ClienteComponent,
-    FuncionarioComponent
+    FuncionarioComponent,
+    ComponentesCargos,
   ],
   imports: [
     BrowserModule,
