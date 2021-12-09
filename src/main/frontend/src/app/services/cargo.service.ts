@@ -9,11 +9,13 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class CargoService {
-  
   url = 'http://localhost:8080/api/v1/cargos';
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+    }),
   };
 
   constructor(private httpClient: HttpClient) {}
@@ -31,7 +33,12 @@ export class CargoService {
   }
 
   deleteCargo(id: number) {
-    //console.log(this.url + '/' + cargo.id)
-    return this.httpClient.delete(this.url + '/' + id)
+    return this.httpClient.delete(this.url + '/' + id);
+  }
+
+  atualizar(cargo: Cargo) {
+    console.log(JSON.stringify(cargo))
+
+    return this.httpClient.put<Cargo>(this.url, JSON.stringify(cargo), this.httpOptions);
   }
 }

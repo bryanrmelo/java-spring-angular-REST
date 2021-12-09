@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -10,9 +11,14 @@ import { ClienteComponent } from './components/cliente';
 import { FuncionarioComponent } from './components/funcionario';
 import { CargoDetalhesComponent } from './components/cargo/cargo-detalhes/cargo-detalhes.component';
 import { CargoEditarComponent } from './components/cargo/cargo-editar/cargo-editar.component';
+import { FormsModule } from '@angular/forms';
 
 
-const ComponentesCargos = [CargoComponent, CargoDetalhesComponent, CargoEditarComponent]
+const ComponentesCargos = [
+  CargoComponent,
+  CargoDetalhesComponent,
+  CargoEditarComponent,
+];
 
 @NgModule({
   declarations: [
@@ -26,10 +32,10 @@ const ComponentesCargos = [CargoComponent, CargoDetalhesComponent, CargoEditarCo
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

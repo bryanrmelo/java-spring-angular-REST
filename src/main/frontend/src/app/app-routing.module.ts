@@ -10,18 +10,21 @@ import { CargoEditarComponent } from './components/cargo/cargo-editar/cargo-edit
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'listarCargos', component: CargoComponent},
-  { path: 'listarCargos/detalhes/:id', component: CargoDetalhesComponent},
-  { path: 'listarCargos/editar/:id', component: CargoEditarComponent},
-  { path: 'listarClientes', component: ClienteComponent},
-  { path: 'listarFuncionarios', component: FuncionarioComponent},
-  
+  { path: 'listarCargos', component: CargoComponent },
+  { path: 'listarCargos/detalhes/:id', component: CargoDetalhesComponent },
+  { path: 'listarCargos/editar/:id', component: CargoEditarComponent },
+  { path: 'listarClientes', component: ClienteComponent },
+  { path: 'listarFuncionarios', component: FuncionarioComponent },
+
   // otherwise redirect to home
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
+
+
+
