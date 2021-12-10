@@ -14,4 +14,6 @@ Projeto feito com o backend com java spring e enviado para o front-end, feito em
 mvn org.springframework.boot:spring-boot-maven-plugin:run
 
 ### Para iniciar o Front-end
-cd .\src\main\frontend\ && ng serve --port 4200 --proxy-config proxy.conf.json
+cd .\src\main\frontend\ ;  ng serve --port 4200 --proxy-config proxy.conf.json 
+
+(esse comando funciona para o VSCode, caso queira rodar no CMD use && no lugar de ; e caso queira rodar no PS precisa separar os comandos toda vez)
