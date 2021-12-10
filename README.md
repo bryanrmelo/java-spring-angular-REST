@@ -14,4 +14,4 @@ Projeto feito com o backend com java spring e enviado para o front-end, feito em
 mvn org.springframework.boot:spring-boot-maven-plugin:run
 
 ### Para iniciar o Front-end
-ng serve -o
+ng serve --port 4200 --proxy-config proxy.conf.json
