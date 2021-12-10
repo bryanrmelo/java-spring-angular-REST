@@ -27,7 +27,6 @@ export class CargoEditarComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log('submit')
     this.cargoService.atualizar(this.cargo).subscribe(() => {
       this.router.navigate(["/","listarCargos"]);
     });

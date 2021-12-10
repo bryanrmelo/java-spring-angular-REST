@@ -15,6 +15,8 @@ export class CargoService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
     }),
   };
 
@@ -37,8 +39,12 @@ export class CargoService {
   }
 
   atualizar(cargo: Cargo) {
-    console.log(JSON.stringify(cargo))
-
-    return this.httpClient.put<Cargo>(this.url, JSON.stringify(cargo), this.httpOptions);
+    console.log(JSON.stringify(cargo));
+    console.log(this.httpOptions);
+    return this.httpClient.put<Cargo>(
+      this.url,
+      JSON.stringify(cargo),
+      this.httpOptions
+    );
   }
 }
