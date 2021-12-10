@@ -10,7 +10,7 @@ import { CargoService } from '../../services/cargo.service';
 export class CargoComponent {
   cargos: Cargo[] | undefined;
 
-  constructor(private cargoService: CargoService, private router : Router) {}
+  constructor(private cargoService: CargoService, private router: Router) {}
 
   ngOnInit(): void {
     this.getCargos();
@@ -24,14 +24,16 @@ export class CargoComponent {
   }
 
   mostrarCargo(cargo: Cargo) {
-    this.cargoService.getCargoPorId(cargo.id).subscribe((cargo: Cargo) => {
-      this.router.navigate(["/listarCargos", cargo.id])
-    })
+    this.router.navigate(['/listarCargos/detalhes', cargo.id]);
   }
 
-  editarCargo(cargo: Cargo) {
-    this.router.navigate(["/", "home"])
+  editarCargo(id: number) {
+    this.router.navigate(['/listarCargos/editar', id]);
   }
 
-  deletarCargo(cargo: Cargo) {}
+  deletarCargo(id: number) {
+    this.cargoService.deleteCargo(id).subscribe(() => {
+      this.getCargos();
+    });
+  }
 }

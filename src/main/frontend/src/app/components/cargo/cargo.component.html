@@ -25,42 +25,18 @@
               <button
                 type="button"
                 class="btn btn-warning btn-sm"
-                (click)="editarCargo(cargo)"
+                (click)="editarCargo(cargo.id)"
               >
                 Editar
               </button>
               <button
                 type="button"
                 class="btn btn-danger btn-sm ml-1"
-                (click)="deletarCargo(cargo)"
+                (click)="deletarCargo(cargo.id)"
               >
                 Deletar
               </button>
             </td>
-
-            <!--
-            <td>
-              <div>
-                <a [routerLink]="['/listarCargos', cargo.id]" style="color: black">
-                  <i class="far fa-eye"></i>
-                </a>
-
-                <a
-                  routerLink="/listarCargos"
-                  style="color: black; margin-left: 10px"
-                >
-                  <i class="fas fa-edit"></i>
-                </a>
-
-                <a
-                  routerLink="/listarCargos"
-                  style="color: black; margin-left: 10px"
-                >
-                  <i class="fas fa-trash-alt"></i>
-                </a>
-              </div>
-            </td>
-            -->
           </tr>
         </tbody>
       </table>
