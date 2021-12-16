@@ -1,62 +1,41 @@
 <div class="container">
-    <div class="card list-car">
-      <h5 class="card-header">Lista de clientes</h5>
-      <div class="card-body">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Nome</th>
-              <th scope="col">Email</th>
-              <th scope="col">Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let cliente of clientes">
-              <td>{{ cliente.nome }}</td>
-              <td>{{ cliente.email }} </td>
-              <td>
-                <div>
-                  <a routerLink="/home" style="color: black">
-                    <i class="far fa-eye"></i>
-                  </a>
-  
-                  <a
-                    routerLink="/listarCargos"
-                    style="color: black; margin-left: 10px"
-                  >
-                    <i class="fas fa-edit"></i>
-                  </a>
-  
-                  <a
-                    routerLink="/listarCargos"
-                    style="color: black; margin-left: 10px"
-                  >
-                    <i class="fas fa-trash-alt"></i>
-                  </a>
-                </div>
-              </td>
-              <!--
-              <td>
-                <button
-                  type="button"
-                  class="btn btn-warning btn-sm"
-                  (click)="editCar(car)"
-                >
-                  Editar
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-danger btn-sm ml-1"
-                  (click)="deleteCar(car)"
-                >
-                  Deletar
-                </button>
-              </td>
-              -->
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <div class="card list-car">
+    <h5 class="card-header">Lista de clientes</h5>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <td>{{ cliente.nome }}</td>
+            <td>{{ cliente.email }}</td>
+            <td>
+              <button
+                type="button"
+                class="btn"
+                (click)="mostrarCliente(cliente.id)"
+              >
+                <i class="far fa-eye"></i>
+              </button>
+              <button type="button" class="btn" (click)="editarCliente(cliente.id)">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button
+                type="button"
+                class="btn"
+                (click)="deletarCliente(cliente.id)"
+              >
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  
+</div>

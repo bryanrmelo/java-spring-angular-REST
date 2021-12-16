@@ -8,18 +8,21 @@ import { CargoService } from 'src/app/services/cargo.service';
   templateUrl: './cargo-detalhes.component.html',
 })
 export class CargoDetalhesComponent implements OnInit {
-
   cargo: Cargo;
 
-  constructor(private cargoService: CargoService, private route : ActivatedRoute) { }
+  constructor(
+    private cargoService: CargoService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.getCargoPorId()
+    this.getCargoPorId();
   }
   getCargoPorId() {
-    this.cargoService.getCargoPorId(this.route.snapshot.params.id).subscribe(cargo => {
-      this.cargo = cargo;
-    })
+    this.cargoService
+      .getCargoPorId(this.route.snapshot.params.id)
+      .subscribe((cargo) => {
+        this.cargo = cargo;
+      });
   }
-
 }

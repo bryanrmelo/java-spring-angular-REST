@@ -1,8 +1,9 @@
 import { Link } from "./link";
 import { Endereco } from "./endereco"
+import { Projeto } from "./projeto";
 
 
-export interface Cliente {
+export class Cliente {
   id: number;
   nome: string;
   cpf: string;
@@ -10,5 +11,6 @@ export interface Cliente {
   email: string;
   dataNascimento: string;
   endereco: Endereco;
+  projetos: Projeto[];
   _links: Array<Link>[];
 }

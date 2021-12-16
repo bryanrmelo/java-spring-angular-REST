@@ -27,8 +27,8 @@ export class CargoComponent {
   criarCargo() {
     this.router.navigate(['/listarCargos/novo']);
   }
-  mostrarCargo(cargo: Cargo) {
-    this.router.navigate(['/listarCargos/detalhes', cargo.id]);
+  mostrarCargo(id: number) {
+    this.router.navigate(['/listarCargos/detalhes', id]);
   }
 
   editarCargo(id: number) {

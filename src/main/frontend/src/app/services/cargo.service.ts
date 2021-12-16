@@ -31,6 +31,10 @@ export class CargoService {
     );
   }
 
+  getCargoPorId(id: number): Observable<Cargo> {
+    return this.httpClient.get<Cargo>(this.url + `/${id}`);
+  }
+
   criarCargo(cargo: Cargo) {
     return this.httpClient.post(
       this.url,
@@ -39,21 +43,15 @@ export class CargoService {
     );
   }
 
-  getCargoPorId(id: number): Observable<Cargo> {
-    return this.httpClient.get<Cargo>(this.url + `/${id}`);
-  }
-
-  deleteCargo(id: number) {
-    return this.httpClient.delete(this.url + '/' + id);
-  }
-
-  atualizar(cargo: Cargo) {
-    console.log(JSON.stringify(cargo));
-    console.log(this.httpOptions);
+  editarCargo(cargo: Cargo) {
     return this.httpClient.put<Cargo>(
       this.url + '/' + cargo.id,
       JSON.stringify(cargo),
       this.httpOptions
     );
+  }
+  
+  deleteCargo(id: number) {
+    return this.httpClient.delete(this.url + '/' + id);
   }
 }

@@ -13,6 +13,9 @@ import { CargoDetalhesComponent } from './components/cargo/cargo-detalhes/cargo-
 import { CargoEditarComponent } from './components/cargo/cargo-editar/cargo-editar.component';
 import { FormsModule } from '@angular/forms';
 import { CargoCriarComponent } from './components/cargo/cargo-criar/cargo-criar.component';
+import { ClienteCriarComponent } from './components/cliente/cliente-criar/cliente-criar.component';
+import { ClienteEditarComponent } from './components/cliente/cliente-editar/cliente-editar.component';
+import { ClienteDetalhesComponent } from './components/cliente/cliente-detalhes/cliente-detalhes.component';
 
 
 const ComponentesCargos = [
@@ -29,6 +32,9 @@ const ComponentesCargos = [
     FuncionarioComponent,
     ComponentesCargos,
     CargoCriarComponent,
+    ClienteCriarComponent,
+    ClienteEditarComponent,
+    ClienteDetalhesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+<div class="container">
+    <p>ID: <b>{{ cliente.id }}</b></p>
+    <p>Nome: <b>{{ cliente.nome }}</b></p>
+    <p>CPF: <b>{{ cliente.cpf }}</b></p>
+    <p>Telefone: <b>{{ cliente.telefone }}</b></p>
+    <p>Email: <b>{{ cliente.email }}</b></p>
+    <p>Endereço:</p>
+    <ul>
+        <li>ID: <b>{{ cliente.endereco.id }}</b></li>
+        <li>CEP: <b>{{ cliente.endereco.cep }}</b></li>
+        <li>Logradouro: <b>{{ cliente.endereco.logradouro }}</b></li>
+        <li>Complemento: <b>{{ cliente.endereco.complemento }}</b></li>
+        <li>Número: <b>{{ cliente.endereco.numero }}</b></li>
+        <li>Bairro: <b>{{ cliente.endereco.bairro }}</b></li>
+        <li>Cidade: <b>{{ cliente.endereco.cidade }}</b></li>
+        <li>UF: <b>{{ cliente.endereco.uf }}</b></li>
+    </ul>
+    <p>Projetos</p>
+    <ul>
+        <ul *ngFor="let projeto of cliente.projetos">
+            <li>ID: <b>{{ projeto.id }}</b></li>
+            <li>Nome: <b>{{ projeto.nome }}</b></li>
+            <li>Descricao: <b>{{ projeto.descricao }}</b></li>
+            <li>Data de início: <b>{{ projeto.dataInicio }}</b></li>
+            <li>Data de término: <b>{{ projeto.dataFim }}</b></li>
+            <li>Orçamento: <b>{{ projeto.orcamento }}</b></li>
+            <li>Gastos: <b>{{ projeto.gastos }}</b></li>
+        </ul>
+    </ul>
+</div>

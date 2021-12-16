@@ -1,7 +1,7 @@
-import { Cargo } from './../../../model/cargo';
-import { CargoService } from 'src/app/services/cargo.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CargoService } from 'src/app/services/cargo.service';
+import { Cargo } from './../../../model/cargo';
 
 @Component({
   selector: 'app-cargo-editar',
@@ -27,7 +27,7 @@ export class CargoEditarComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.cargoService.atualizar(this.cargo).subscribe(() => {
+    this.cargoService.editarCargo(this.cargo).subscribe(() => {
       this.router.navigate(["/","listarCargos"]);
     });
   }

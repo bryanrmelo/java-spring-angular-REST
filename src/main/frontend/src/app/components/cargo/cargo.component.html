@@ -15,26 +15,18 @@
             <td>{{ cargo.id }}</td>
             <td>{{ cargo.nome }}</td>
             <td>
-              <button
-                type="button"
-                class="btn btn-sucess btn-sm ml-1"
-                (click)="mostrarCargo(cargo)"
-              >
-                Detalhes
+              <button type="button" class="btn" (click)="mostrarCargo(cargo.id)">
+                <i class="far fa-eye"></i>
+              </button>
+              <button type="button" class="btn" (click)="editarCargo(cargo.id)">
+                <i class="fas fa-edit"></i>
               </button>
               <button
                 type="button"
-                class="btn btn-warning btn-sm"
-                (click)="editarCargo(cargo.id)"
-              >
-                Editar
-              </button>
-              <button
-                type="button"
-                class="btn btn-danger btn-sm ml-1"
+                class="btn"
                 (click)="deletarCargo(cargo.id)"
               >
-                Deletar
+                <i class="fas fa-trash-alt"></i>
               </button>
             </td>
           </tr>
