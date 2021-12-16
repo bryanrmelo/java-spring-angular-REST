@@ -42,7 +42,7 @@ export class CargoService {
     console.log(JSON.stringify(cargo));
     console.log(this.httpOptions);
     return this.httpClient.put<Cargo>(
-      this.url,
+      this.url + '/' + cargo.id,
       JSON.stringify(cargo),
       this.httpOptions
     );

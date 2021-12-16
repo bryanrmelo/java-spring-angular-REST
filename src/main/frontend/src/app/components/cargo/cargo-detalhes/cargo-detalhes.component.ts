@@ -9,7 +9,7 @@ import { CargoService } from 'src/app/services/cargo.service';
 })
 export class CargoDetalhesComponent implements OnInit {
 
-  cargo!: Cargo;
+  cargo: Cargo;
 
   constructor(private cargoService: CargoService, private route : ActivatedRoute) { }
 

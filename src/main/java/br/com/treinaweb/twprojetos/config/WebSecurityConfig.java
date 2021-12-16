@@ -2,16 +2,12 @@ package br.com.treinaweb.twprojetos.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import br.com.treinaweb.twprojetos.enums.Perfil;
 import br.com.treinaweb.twprojetos.servicos.UserDetailsServiceImpl;
@@ -37,7 +33,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .antMatchers("/**/cadastrar").hasAuthority(Perfil.ADMIN.toString())
             .antMatchers("/**/editar").hasAuthority(Perfil.ADMIN.toString())
             .antMatchers("/**/excluir").hasAuthority(Perfil.ADMIN.toString())
-            .antMatchers(HttpMethod.PUT).permitAll()
             .anyRequest().authenticated();
             
    
@@ -66,10 +61,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .passwordEncoder(passwordEncoder);
     }
 
-    CorsConfigurationSource corsConfigurationSource() {
-        UrlBasedCorsConfigurationSource source = new
-                UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", new CorsConfiguration().applyPermitDefaultValues());
-        return source;
-    }
+    
 }
