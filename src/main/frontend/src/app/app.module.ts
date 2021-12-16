@@ -12,6 +12,7 @@ import { FuncionarioComponent } from './components/funcionario';
 import { CargoDetalhesComponent } from './components/cargo/cargo-detalhes/cargo-detalhes.component';
 import { CargoEditarComponent } from './components/cargo/cargo-editar/cargo-editar.component';
 import { FormsModule } from '@angular/forms';
+import { CargoCriarComponent } from './components/cargo/cargo-criar/cargo-criar.component';
 
 
 const ComponentesCargos = [
@@ -27,6 +28,7 @@ const ComponentesCargos = [
     ClienteComponent,
     FuncionarioComponent,
     ComponentesCargos,
+    CargoCriarComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { CargoService } from '../../services/cargo.service';
 })
 export class CargoComponent {
   cargos: Cargo[] | undefined;
+  cargo: Cargo;
 
   constructor(private cargoService: CargoService, private router: Router) {}
 
@@ -23,6 +24,9 @@ export class CargoComponent {
     });
   }
 
+  criarCargo() {
+    this.router.navigate(['/listarCargos/novo']);
+  }
   mostrarCargo(cargo: Cargo) {
     this.router.navigate(['/listarCargos/detalhes', cargo.id]);
   }

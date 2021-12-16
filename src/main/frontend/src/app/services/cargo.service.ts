@@ -16,7 +16,8 @@ export class CargoService {
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+      'Access-Control-Allow-Headers':
+        'Origin, X-Requested-With, Content-Type, Accept',
     }),
   };
 
@@ -27,6 +28,14 @@ export class CargoService {
       map((data: any) => {
         return data._embedded.cargoList as Cargo[];
       })
+    );
+  }
+
+  criarCargo(cargo: Cargo) {
+    return this.httpClient.post(
+      this.url,
+      JSON.stringify(cargo),
+      this.httpOptions
     );
   }
 
