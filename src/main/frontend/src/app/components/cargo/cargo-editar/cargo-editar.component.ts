@@ -8,9 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './cargo-editar.component.html',
 })
 export class CargoEditarComponent implements OnInit {
-  cargo!: Cargo;
+  cargo: Cargo;
 
-  nome!: string;
+  nome: string;
 
   constructor(
     private cargoService: CargoService,
