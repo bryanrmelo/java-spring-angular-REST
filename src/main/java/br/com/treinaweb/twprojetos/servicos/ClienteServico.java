@@ -37,7 +37,7 @@ public class ClienteServico {
 
     public Cliente buscarPorId(Long id) {
         return clienteRepositorio.findById(id)
-            .orElseThrow(() -> new ClienteNaoEncontradoException(id));
+                .orElseThrow(() -> new ClienteNaoEncontradoException(id));
     }
 
     public Cliente cadastrar(Cliente cliente) {
@@ -48,6 +48,7 @@ public class ClienteServico {
         Cliente cliente = clienteMapeador.converterParaEntidade(clienteDTO);
 
         return clienteRepositorio.save(cliente);
+
     }
 
     public Cliente atualizar(ClienteDTO clienteDTO, Long id) {

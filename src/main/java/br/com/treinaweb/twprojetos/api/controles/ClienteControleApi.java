@@ -2,6 +2,8 @@ package br.com.treinaweb.twprojetos.api.controles;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -58,7 +60,7 @@ public class ClienteControleApi {
     @GetMapping("/{id}")
     public EntityModel<Cliente> buscarPorId(@PathVariable Long id) {
         Cliente cliente = clienteServico.buscarPorId(id);
-
+        
         return clienteAssembler.toModel(cliente);
     }
     @PutMapping("/{id}")
@@ -77,7 +79,7 @@ public class ClienteControleApi {
 
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    public EntityModel<Cliente> cadastrar(ClienteDTO clienteDTO) {
+    public EntityModel<Cliente> cadastrar(@RequestBody ClienteDTO clienteDTO) {
         Cliente cliente = clienteServico.cadastrar(clienteDTO);
 
         return clienteAssembler.toModel(cliente);

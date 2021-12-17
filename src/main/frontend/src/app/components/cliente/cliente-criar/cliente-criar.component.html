@@ -1,1 +1,130 @@
-<p>cliente-criar works!</p>
+<div class="container">
+  <form #myForm="ngForm" (submit)="onSubmit()">
+    <div ngModelGroup="cliente">
+      <div class="mb-3">
+        <label class="form-label" for="nome">Nome</label>
+        <input
+          class="form-control"
+          id="nome"
+          type="text"
+          [(ngModel)]="cliente.nome"
+          name="cliente.nome"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="cpf">CPF</label>
+        <input
+          class="form-control"
+          id="cpf"
+          type="text"
+          [(ngModel)]="cliente.cpf"
+          name="cliente.cpf"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="telefone">Telefone</label>
+        <input
+          class="form-control"
+          id="telefone"
+          type="text"
+          [(ngModel)]="cliente.telefone"
+          name="cliente.telefone"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="email">Email</label>
+        <input
+          class="form-control"
+          id="email"
+          type="text"
+          [(ngModel)]="cliente.email"
+          name="cliente.email"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="data">Data de nascimento</label>
+        <input
+          class="form-control"
+          [(ngModel)]="cliente.dataNascimento"
+          name="cliente.dataNascimento"
+          type="text"
+        />
+      </div>
+    </div>
+    <div ngModelGroup="endereco">
+      <div class="mb-3">
+        <label class="form-label" for="cep">CEP</label>
+        <input
+          #cep
+          class="form-control"
+          id="cep"
+          type="text"
+          [(ngModel)]="cliente.endereco.cep"
+          name="cliente.endereco.cep"
+          (blur)="getAdress(cep.value)"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="endereco">Endereço</label>
+        <input
+          class="form-control"
+          id="endereco"
+          type="text"
+          [(ngModel)]="cliente.endereco.logradouro"
+          name="cliente.endereco.logradouro"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="numero">Número</label>
+        <input
+          class="form-control"
+          id="numero"
+          type="text"
+          [(ngModel)]="cliente.endereco.numero"
+          name="cliente.endereco.numero"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="complemento">Complemento</label>
+        <input
+          class="form-control"
+          id="complemento"
+          type="text"
+          [(ngModel)]="cliente.endereco.complemento"
+          name="cliente.endereco.complemento"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="bairro">Bairro</label>
+        <input
+          class="form-control"
+          id="bairro"
+          type="text"
+          [(ngModel)]="cliente.endereco.bairro"
+          name="cliente.endereco.bairro"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="cidade">Cidade</label>
+        <input
+          class="form-control"
+          id="cidade"
+          type="text"
+          [(ngModel)]="cliente.endereco.cidade"
+          name="cliente.endereco.cidade"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="uf">Estado</label>
+        <input
+          class="form-control"
+          id="uf"
+          type="text"
+          [(ngModel)]="cliente.endereco.uf"
+          name="cliente.endereco.uf"
+        />
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Criar</button>
+  </form>
+</div>

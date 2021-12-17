@@ -12,6 +12,10 @@ public class ClienteMapeador {
         Cliente cliente = new Cliente();
 
         cliente.setNome(clienteDTO.getNome());
+        cliente.setCpf(clienteDTO.getCpf());
+        cliente.setEmail(clienteDTO.getEmail());
+        cliente.setDataNascimento(clienteDTO.getDataNascimento());
+        cliente.setTelefone(clienteDTO.getTelefone());
 
         return cliente;
     }
