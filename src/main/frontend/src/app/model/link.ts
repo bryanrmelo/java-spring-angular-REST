@@ -1,6 +1,6 @@
 import { Self } from "./self";
 
 
-export interface Link {
+export class Link {
     self : Array<Self>[]
 }
