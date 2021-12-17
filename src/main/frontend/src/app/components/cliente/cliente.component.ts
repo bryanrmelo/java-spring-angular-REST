@@ -5,7 +5,7 @@ import { ClienteService } from '../../services/cliente.service';
 
 @Component({
   selector: 'app-cliente',
-  templateUrl: './listaClientes.component.html',
+  templateUrl: './cliente.component.html',
 })
 export class ClienteComponent implements OnInit {
 
@@ -24,12 +24,16 @@ export class ClienteComponent implements OnInit {
     });
   }
 
+  criarCliente() {
+    this.router.navigate(['clientes/novo'])
+  }
+
   mostrarCliente(id : number) {
-    this.router.navigate(['listarClientes/detalhes', id]);
+    this.router.navigate(['clientes/detalhes', id]);
   }
 
   editarCliente(id: number) {
-    this.router.navigate(['listarClientes/editar', id]);
+    this.router.navigate(['clientes/editar', id]);
   }
 
   deletarCliente(id: number) {

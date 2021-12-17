@@ -14,17 +14,17 @@ import { HomeComponent } from './components/home';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'listarCargos', component: CargoComponent },
-  { path: 'listarCargos/novo', component: CargoCriarComponent },
-  { path: 'listarCargos/editar/:id', component: CargoEditarComponent },
-  { path: 'listarCargos/detalhes/:id', component: CargoDetalhesComponent },
+  { path: 'cargos', component: CargoComponent },
+  { path: 'cargos/novo', component: CargoCriarComponent },
+  { path: 'cargos/editar/:id', component: CargoEditarComponent },
+  { path: 'cargos/detalhes/:id', component: CargoDetalhesComponent },
 
-  { path: 'listarClientes', component: ClienteComponent },
-  { path: 'listarClientes/novo', component: ClienteCriarComponent },
-  { path: 'listarClientes/editar/:id', component: ClienteEditarComponent },
-  { path: 'listarClientes/detalhes/:id', component: ClienteDetalhesComponent },
+  { path: 'clientes', component: ClienteComponent },
+  { path: 'clientes/novo', component: ClienteCriarComponent },
+  { path: 'clientes/editar/:id', component: ClienteEditarComponent },
+  { path: 'clientes/detalhes/:id', component: ClienteDetalhesComponent },
 
-  { path: 'listarFuncionarios', component: FuncionarioComponent },
+  { path: 'funcionarios', component: FuncionarioComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' },

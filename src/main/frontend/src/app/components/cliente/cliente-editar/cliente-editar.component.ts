@@ -27,7 +27,7 @@ export class ClienteEditarComponent implements OnInit {
 
   onSubmit(): void {
     this.clienteService.editarCliente(this.cliente).subscribe(() => {
-      this.router.navigate(['/', 'listarClientes']);
+      this.router.navigate(['clientes/']);
     });
   }
 

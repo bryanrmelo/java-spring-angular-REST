@@ -16,7 +16,7 @@ export class ClienteCriarComponent implements OnInit {
 
   onSubmit(cliente: Cliente) {
     this.clienteService.criarCliente(cliente).subscribe(() => {
-      this.router.navigate(['listarClientes/'])
+      this.router.navigate(['clientes/'])
     })
   }
 }

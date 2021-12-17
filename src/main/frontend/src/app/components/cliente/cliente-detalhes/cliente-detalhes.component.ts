@@ -1,8 +1,7 @@
-import { Router, ActivatedRoute } from '@angular/router';
-import { ClienteService } from './../../../services/cliente.service';
-import { Cliente } from './../../../model/cliente';
 import { Component, OnInit } from '@angular/core';
-import { Projeto } from 'src/app/model/projeto';
+import { ActivatedRoute } from '@angular/router';
+import { Cliente } from './../../../model/cliente';
+import { ClienteService } from './../../../services/cliente.service';
 
 @Component({
   selector: 'app-cliente-detalhes',

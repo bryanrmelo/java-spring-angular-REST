@@ -16,7 +16,7 @@ export class CargoCriarComponent implements OnInit {
 
   onSubmit() {
     this.cargoService.criarCargo(this.cargo).subscribe(() => {
-      this.router.navigate(["/","listarCargos"]);
+      this.router.navigate(["cargos/"]);
     });
   }
 }

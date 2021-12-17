@@ -25,14 +25,14 @@ export class CargoComponent {
   }
 
   criarCargo() {
-    this.router.navigate(['/listarCargos/novo']);
+    this.router.navigate(['/cargos/novo']);
   }
   mostrarCargo(id: number) {
-    this.router.navigate(['/listarCargos/detalhes', id]);
+    this.router.navigate(['/cargos/detalhes', id]);
   }
 
   editarCargo(id: number) {
-    this.router.navigate(['/listarCargos/editar', id]);
+    this.router.navigate(['/cargos/editar', id]);
   }
 
   deletarCargo(id: number) {

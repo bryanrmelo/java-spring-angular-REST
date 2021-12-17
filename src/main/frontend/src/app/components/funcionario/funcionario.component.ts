@@ -5,7 +5,7 @@ import { FuncionarioService } from 'src/app/services/funcionario.service';
 
 @Component({
   selector: 'app-funcionario',
-  templateUrl: './listaFuncionarios.component.html',
+  templateUrl: './funcionario.component.html',
 })
 export class FuncionarioComponent implements OnInit {
   funcionarios: Funcionario[] | undefined;
