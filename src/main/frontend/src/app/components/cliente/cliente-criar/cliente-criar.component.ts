@@ -51,7 +51,11 @@ export class ClienteCriarComponent implements OnInit {
     console.log(this.cliente);
     this.cliente.endereco = this.endereco;
 
-
+    this.enderecoService
+      .criarEndereco(this.cliente.endereco)
+      .subscribe(endereco => {
+        endereco.id = this.cliente.endereco.id;
+      });
 
     this.clienteService.criarCliente(this.cliente).subscribe(() => {
       this.router.navigate(['clientes/']);

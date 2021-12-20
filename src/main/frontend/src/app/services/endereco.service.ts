@@ -1,12 +1,12 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Endereco } from '../model/endereco';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EnderecoService {
-
-  url = 'http://localhost:8080/api/v1/clientes';
+  url = 'http://localhost:8080/api/v1/clientes/endereco';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -18,6 +18,13 @@ export class EnderecoService {
     }),
   };
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
+  criarEndereco(endereco: Endereco) {
+    return this.httpClient.post<Endereco>(
+      this.url,
+      JSON.stringify(endereco),
+      this.httpOptions
+    );
+  }
 }

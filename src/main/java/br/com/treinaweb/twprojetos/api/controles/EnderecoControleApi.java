@@ -15,7 +15,7 @@ import br.com.treinaweb.twprojetos.entidades.Endereco;
 import br.com.treinaweb.twprojetos.servicos.EnderecoServico;
 
 @RestController
-@RequestMapping("/api/v1/cliente/endereco")
+@RequestMapping("/api/v1/clientes/endereco")
 public class EnderecoControleApi {
     
     @Autowired
