@@ -17,10 +17,19 @@ public class EnderecoAssembler implements SimpleRepresentationModelAssembler<End
 
     @Override
     public void addLinks(EntityModel<Endereco> resource) {
+        String cep = resource.getContent().getCep();
+        String numero = resource.getContent().getNumero();
+
+        Link selfLink = linkTo(methodOn(EnderecoControleApi.class).getEndereco(cep, numero))
+                .withSelfRel()
+                .withType("GET");
+
+        resource.add(selfLink);
     }
 
     @Override
     public void addLinks(CollectionModel<EntityModel<Endereco>> resources) {
+        
         Link cadastroLink = linkTo(methodOn(EnderecoControleApi.class).cadastrar(null))
                 .withSelfRel()
                 .withType("POST");

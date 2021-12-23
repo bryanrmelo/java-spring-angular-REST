@@ -48,13 +48,18 @@ export class ClienteCriarComponent implements OnInit {
     } catch (exception) {
       this.cliente.dataNascimento = '';
     }
+
     console.log(this.cliente);
     this.cliente.endereco = this.endereco;
 
     this.enderecoService
       .criarEndereco(this.cliente.endereco)
-      .subscribe(endereco => {
-        endereco.id = this.cliente.endereco.id;
+      .subscribe(() => {});
+
+    this.enderecoService
+      .getEndereco(this.cliente.endereco)
+      .subscribe((endereco) => {
+        this.cliente.endereco = endereco;
       });
 
     this.clienteService.criarCliente(this.cliente).subscribe(() => {
@@ -64,7 +69,7 @@ export class ClienteCriarComponent implements OnInit {
 
   getAdress(cep: String) {
     this.http
-      .get(`http://viacep.com.br/ws/${cep}/json`, this.httpOptions)
+      .get(`http://viacep.com.br/ws/${cep}/json`)
       .subscribe((endereco) => {
         this.templateForm?.form.patchValue({ endereco: endereco });
       });

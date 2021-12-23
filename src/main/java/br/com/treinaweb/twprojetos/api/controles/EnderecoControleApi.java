@@ -3,6 +3,8 @@ package br.com.treinaweb.twprojetos.api.controles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +32,15 @@ public class EnderecoControleApi {
         Endereco endereco = enderecoServico.cadastrar(enderecoDTO);
 
         return enderecoAssembler.toModel(endereco);
+    }
+
+    @GetMapping("/{cep}/{numero}")
+    public EntityModel<Endereco> getEndereco(@PathVariable String cep, @PathVariable String numero) { {
+        Endereco endereco = enderecoServico.buscarEndereco(cep, numero);
+
+        return enderecoAssembler.toModel(endereco);
+    }
+
     }
 
 }

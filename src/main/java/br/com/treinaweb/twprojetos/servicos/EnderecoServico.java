@@ -22,5 +22,11 @@ public class EnderecoServico {
 
         return enderecoRepositorio.save(endereco);
     }
+
+    public Endereco buscarEndereco(String cep, String numero) {
+        Endereco enderecoEncontrado = enderecoRepositorio.findByCepNumero(cep, numero);
+
+        return enderecoEncontrado;
+    }
     
 }

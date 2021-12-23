@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Endereco } from '../model/endereco';
+import { Endereco } from './../model/endereco';
 
 @Injectable({
   providedIn: 'root',
@@ -26,5 +26,9 @@ export class EnderecoService {
       JSON.stringify(endereco),
       this.httpOptions
     );
+  }
+
+  getEndereco(endereco: Endereco) {
+    return this.httpClient.get<Endereco>(`${this.url}/${endereco.cep}/${endereco.numero}`);
   }
 }
