@@ -59,9 +59,9 @@
           class="form-control"
           id="cep"
           type="text"
-          [(ngModel)]="cliente.endereco.cep"
-          name="cliente.endereco.cep"
-          (blur)="getAdress(cep.value)"
+          [(ngModel)]="endereco.cep"
+          name="endereco.cep"
+          (keyup)="getAdress(cep.value)"
         />
       </div>
       <div class="mb-3">
@@ -70,8 +70,8 @@
           class="form-control"
           id="endereco"
           type="text"
-          [(ngModel)]="cliente.endereco.logradouro"
-          name="cliente.endereco.logradouro"
+          [(ngModel)]="endereco.logradouro"
+          name="endereco.logradouro"
         />
       </div>
       <div class="mb-3">
@@ -80,8 +80,8 @@
           class="form-control"
           id="numero"
           type="text"
-          [(ngModel)]="cliente.endereco.numero"
-          name="cliente.endereco.numero"
+          [(ngModel)]="endereco.numero"
+          name="endereco.numero"
         />
       </div>
       <div class="mb-3">
@@ -90,8 +90,8 @@
           class="form-control"
           id="complemento"
           type="text"
-          [(ngModel)]="cliente.endereco.complemento"
-          name="cliente.endereco.complemento"
+          [(ngModel)]="endereco.complemento"
+          name="endereco.complemento"
         />
       </div>
       <div class="mb-3">
@@ -100,8 +100,8 @@
           class="form-control"
           id="bairro"
           type="text"
-          [(ngModel)]="cliente.endereco.bairro"
-          name="cliente.endereco.bairro"
+          [(ngModel)]="endereco.bairro"
+          name="endereco.bairro"
         />
       </div>
       <div class="mb-3">
@@ -110,8 +110,8 @@
           class="form-control"
           id="cidade"
           type="text"
-          [(ngModel)]="cliente.endereco.cidade"
-          name="cliente.endereco.cidade"
+          [(ngModel)]="endereco.cidade"
+          name="endereco.cidade"
         />
       </div>
       <div class="mb-3">
@@ -120,8 +120,8 @@
           class="form-control"
           id="uf"
           type="text"
-          [(ngModel)]="cliente.endereco.uf"
-          name="cliente.endereco.uf"
+          [(ngModel)]="endereco.uf"
+          name="endereco.uf"
         />
       </div>
     </div>
