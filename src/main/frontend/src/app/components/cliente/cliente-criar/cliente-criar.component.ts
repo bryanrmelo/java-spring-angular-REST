@@ -48,7 +48,7 @@ export class ClienteCriarComponent implements OnInit {
     } catch (exception) {
       this.cliente.dataNascimento = '';
     }
-
+    
     console.log(this.cliente);
     this.cliente.endereco = this.endereco;
 
