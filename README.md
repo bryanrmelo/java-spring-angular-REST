@@ -1,13 +1,13 @@
 # java-spring-angular-REST
-Projeto feito com o backend com java spring e enviado para o front-end, feito em angular, através de APIs REST
+Projeto feito com o backend com Java Spring-Boot e enviado para o front-end, feito em angular, através de API
 
 ## URLs disponíveis na API
 
-<a>http://localhost:8080/api/v1/cargos</a> (GET)<br/>
-<a>http://localhost:8080/api/v1/cargos/(id)</a>(POST, PUT, DELETE)<br/>
-<a>http://localhost:8080/api/v1/clientes</a> (GET)<br/>
-<a>http://localhost:8080/api/v1/clientes/(id)</a>(POST, PUT, DELETE)<br/>
-<a>http://localhost:8080/api/v1/funcionarios</a>(GET)<br/>
+><a>http://localhost:8080/api/v1/cargos</a> (GET)<br/>
+><a>http://localhost:8080/api/v1/cargos/(id)</a>(POST, PUT, DELETE)<br/>
+><a>http://localhost:8080/api/v1/clientes</a> (GET)<br/>
+><a>http://localhost:8080/api/v1/clientes/(id)</a>(POST, PUT, DELETE)<br/>
+><a>http://localhost:8080/api/v1/funcionarios</a>(GET)<br/>
 
 
 ### Para iniciar o Back-end
